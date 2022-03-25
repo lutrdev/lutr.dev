@@ -1,13 +1,14 @@
 import { Flex, Link, Text } from "@chakra-ui/react";
+import NextLink from "next/link";
 
 const Footer = () => {
   return (
-    <Flex as="footer" width="full" align="center">
+    <Flex as="footer" width="full" align="center" marginTop={16}>
       <Text>
-        {new Date().getFullYear()} -{" "}
-        <Link href="https://sznm.dev" isExternal rel="noopener noreferrer">
-          Luca Trușcă
-        </Link>
+        © {new Date().getFullYear()} -{" "}
+        <NextLink href="/" passHref>
+          <Link>Luca Trușcă</Link>
+        </NextLink>
       </Text>
     </Flex>
   );

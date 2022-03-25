@@ -9,6 +9,7 @@ const LinkedInButton = () => {
         as="a"
         target="_blank"
         aria-label="LinkedIn button"
+        colorScheme="brand"
         icon={<GrLinkedinOption />}
       />
     </NextLink>
@@ -22,6 +23,7 @@ const GitHubButton = () => {
         as="a"
         target="_blank"
         aria-label="GitHub button"
+        colorScheme="brand"
         icon={<GrGithub />}
       />
     </NextLink>
