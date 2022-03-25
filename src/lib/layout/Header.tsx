@@ -1,6 +1,8 @@
-import { Flex, Heading, IconButton } from "@chakra-ui/react";
+import { Flex, Heading, IconButton, theme } from "@chakra-ui/react";
 import NextLink from "next/link";
 import { GrGithub, GrLinkedinOption } from "react-icons/gr";
+
+import Box from "lib/components/motion/Box";
 
 const LinkedInButton = () => {
   return (
@@ -31,17 +33,29 @@ const GitHubButton = () => {
 };
 
 const Header = () => {
-  return (
-    <Flex as="header" width="full" align="center">
-      <Heading as="h1" size="md">
-        <NextLink href="/">Luca Trușcă</NextLink>
-      </Heading>
+  // Add the 'BA' to the gray.50 HEX color to make it transparent
+  // There may be a more straight-forward way to do it, however
+  const transparentGray = `${theme.colors.gray["50"]}BA`;
 
-      <Flex marginLeft="auto" gap={4}>
-        <LinkedInButton />
-        <GitHubButton />
+  return (
+    <Box
+      position="sticky"
+      top="0"
+      padding="8"
+      backgroundColor={transparentGray}
+      backdropFilter="blur(7px)"
+    >
+      <Flex as="header" align="center">
+        <Heading as="h1" size="md">
+          <NextLink href="/">Luca Trușcă</NextLink>
+        </Heading>
+
+        <Flex marginLeft="auto" gap={4}>
+          <LinkedInButton />
+          <GitHubButton />
+        </Flex>
       </Flex>
-    </Flex>
+    </Box>
   );
 };
 

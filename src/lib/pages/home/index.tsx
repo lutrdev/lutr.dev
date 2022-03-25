@@ -10,7 +10,6 @@ const Welcome = () => {
       display={{ md: "flex" }}
       alignItems="center"
       minHeight="60vh"
-      gap={8}
       mb={8}
       w="full"
     >
