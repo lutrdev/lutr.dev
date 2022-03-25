@@ -17,7 +17,6 @@ const ProjectCard = (props: ProjectCardProps) => {
           {project.name}
         </Heading>
         <Text>{project.description}</Text>
-        <Text>{project.type}</Text>
       </Stack>
     </Stack>
   );
