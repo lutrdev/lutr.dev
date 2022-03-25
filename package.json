@@ -1,8 +1,8 @@
 {
-  "name": "nextarter-chakra",
-  "version": "0.1.0",
+  "name": "lucatrusca.com",
+  "version": "1.0",
   "private": true,
-  "author": "sozonome",
+  "author": "Luca Trușcă",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
