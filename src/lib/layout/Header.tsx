@@ -1,8 +1,6 @@
 import { Box, Flex, Heading } from "@chakra-ui/react";
 import Link from "next/link";
 
-import ThemeToggle from "./ThemeToggle";
-
 const Header = () => {
   return (
     <Flex as="header" width="full" align="center">
@@ -10,9 +8,7 @@ const Header = () => {
         <Link href="/">Luca Trușcă</Link>
       </Heading>
 
-      <Box marginLeft="auto">
-        <ThemeToggle />
-      </Box>
+      <Box marginLeft="auto" />
     </Flex>
   );
 };

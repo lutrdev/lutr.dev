@@ -1,25 +1,20 @@
-import { Box } from "@chakra-ui/react";
-
-import CTASection from "lib/components/samples/CTASection";
-import SomeImage from "lib/components/samples/SomeImage";
-import SomeText from "lib/components/samples/SomeText";
+import { Box, Heading, Stack, Text } from "@chakra-ui/react";
 
 const Home = () => {
   return (
     <Box
       display={{ md: "flex" }}
       alignItems="center"
-      minHeight="70vh"
+      minHeight="60vh"
       gap={8}
       mb={8}
       w="full"
     >
-      <SomeImage />
-
-      <Box>
-        <SomeText />
-        <CTASection />
-      </Box>
+      <Stack>
+        <Heading as="h2">Hi! 👋 I'm Luca.</Heading>
+        <Text fontSize="2xl">Computer Science student & enthusiast</Text>
+      </Stack>
+      <Box />
     </Box>
   );
 };
