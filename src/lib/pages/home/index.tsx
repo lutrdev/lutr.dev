@@ -33,7 +33,7 @@ const Projects = () => {
       <Heading as="h3" size="xl" marginBottom={6}>
         Projects
       </Heading>
-      <SimpleGrid minChildWidth="200px" spacing={8}>
+      <SimpleGrid minChildWidth="210px" spacing={8}>
         {projects.map((project) => (
           <ProjectCard project={project} />
         ))}
