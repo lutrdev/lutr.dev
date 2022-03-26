@@ -118,16 +118,31 @@ const MoreDetailsPopover = ({ project }: MoreDetailsPopoverProps) => {
               </UnorderedList>
             </Box>
 
-            <Box>
-              <Heading size="sm">Technologies:</Heading>
-              <UnorderedList>
-                {project.technologies.map((technology) => (
-                  <ListItem>
-                    <b>{technology.name}</b> - {technology.description}
-                  </ListItem>
-                ))}
-              </UnorderedList>
-            </Box>
+            {project.technologies.length > 0 && (
+              <Box>
+                <Heading size="sm">Technologies:</Heading>
+                <UnorderedList>
+                  {project.technologies.map((technology) => (
+                    <ListItem>
+                      <b>{technology.name}</b> - {technology.description}
+                    </ListItem>
+                  ))}
+                </UnorderedList>
+              </Box>
+            )}
+
+            {project.tools.length > 0 && (
+              <Box>
+                <Heading size="sm">Tools:</Heading>
+                <UnorderedList>
+                  {project.tools.map((tool) => (
+                    <ListItem>
+                      <b>{tool.name}</b> - {tool.description}
+                    </ListItem>
+                  ))}
+                </UnorderedList>
+              </Box>
+            )}
           </Stack>
         </PopoverBody>
       </PopoverContent>

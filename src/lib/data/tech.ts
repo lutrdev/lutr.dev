@@ -8,6 +8,7 @@ type Technology =
   | "libGDX"
   | "Feather"
   | "Gradle"
+  | "ProGuard"
   | "shadow"
   | "Ashley"
   | "libKTX"
@@ -30,6 +31,7 @@ export const technologies: Record<Technology, TechnologyDetails> = {
   libGDX: { name: "libGDX", description: "Game framework" },
   Feather: { name: "Feather", description: "Dependency injection for Java" },
   Gradle: { name: "Gradle", description: "Build automation system" },
+  ProGuard: { name: "ProGuard", description: "Android app size optimizer" },
   shadow: { name: "shadow", description: "Gradle plugin for creating JARs" },
   Ashley: { name: "Ashley", description: "Entity-Component-System library" },
   libKTX: { name: "libKTX", description: "Kotlin extensions for libGDX" },
@@ -69,7 +71,14 @@ export const technologies: Record<Technology, TechnologyDetails> = {
 };
 
 // Tools
-type Tool = "IntelliJ IDEA" | "Android Studio" | "Inkscape";
+type Tool =
+  | "IntelliJ IDEA"
+  | "Android Studio"
+  | "Inkscape"
+  | "TexturePacker"
+  | "Hiero"
+  | "gdx-liftoff"
+  | "Figma";
 
 export interface ToolDetails {
   name: Tool;
@@ -80,4 +89,14 @@ export const tools: Record<Tool, ToolDetails> = {
   "IntelliJ IDEA": { name: "IntelliJ IDEA", description: "IDE" },
   "Android Studio": { name: "Android Studio", description: "IDE" },
   Inkscape: { name: "Inkscape", description: "Vector graphics editor" },
+  Figma: { name: "Figma", description: "Web-based vector graphics editor" },
+  TexturePacker: {
+    name: "TexturePacker",
+    description: "Texture atlas packing tool",
+  },
+  Hiero: { name: "Hiero", description: "Bitmap font packing tool" },
+  "gdx-liftoff": {
+    name: "gdx-liftoff",
+    description: "Setup tool for libGDX projects\n",
+  },
 };
