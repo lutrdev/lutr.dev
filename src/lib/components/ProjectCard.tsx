@@ -1,13 +1,24 @@
 import {
+  Box,
   Button,
   Flex,
   Heading,
   IconButton,
   Image,
+  ListItem,
+  Popover,
+  PopoverArrow,
+  PopoverBody,
+  PopoverCloseButton,
+  PopoverContent,
+  PopoverHeader,
+  PopoverTrigger,
   Stack,
   Text,
+  UnorderedList,
 } from "@chakra-ui/react";
 import NextLink from "next/link";
+import { AiOutlineInfoCircle } from "react-icons/ai";
 import { GrGithub } from "react-icons/gr";
 
 import type { Project } from "../data/projects";
@@ -68,6 +79,87 @@ const ProjectButton = ({ projectType, projectUrl }: ProjectButtonProps) => {
 
 //-------------------------------------------------------------------------------------
 
+interface MoreDetailsPopoverProps {
+  project: Project;
+}
+
+const MoreDetailsPopover = ({ project }: MoreDetailsPopoverProps) => {
+  return (
+    <Popover>
+      <PopoverTrigger>
+        <IconButton
+          aria-label="More details"
+          colorScheme="brand"
+          variant="ghost"
+          icon={<AiOutlineInfoCircle />}
+        />
+      </PopoverTrigger>
+
+      <PopoverContent width={350} maxHeight={400}>
+        <PopoverArrow />
+        <PopoverCloseButton />
+        <PopoverHeader>
+          <Flex alignItems="baseline" gap={2}>
+            <Heading size="sm">{project.name}</Heading>
+            <Text size="sm">({project.year})</Text>
+          </Flex>
+        </PopoverHeader>
+
+        <PopoverBody overflowY="auto">
+          <Stack gap={2}>
+            <Text>{project.moreDetailsDescription}</Text>
+
+            <Box>
+              <Heading size="sm">Languages:</Heading>
+              <UnorderedList>
+                {project.languages.map((language) => (
+                  <ListItem>{language}</ListItem>
+                ))}
+              </UnorderedList>
+            </Box>
+
+            <Box>
+              <Heading size="sm">Technologies:</Heading>
+              <UnorderedList>
+                {project.technologies.map((technology) => (
+                  <ListItem>
+                    <b>{technology.name}</b> - {technology.description}
+                  </ListItem>
+                ))}
+              </UnorderedList>
+            </Box>
+          </Stack>
+        </PopoverBody>
+      </PopoverContent>
+    </Popover>
+  );
+};
+
+//-------------------------------------------------------------------------------------
+
+interface ButtonsFooterProps {
+  project: Project;
+}
+
+const ButtonsFooter = ({ project }: ButtonsFooterProps) => {
+  return (
+    <Flex marginTop={2} justifyContent="space-between">
+      <MoreDetailsPopover project={project} />
+      <Flex justifyContent="right">
+        <Flex gap={2}>
+          <GithubButton githubUrl={project.githubUrl} />
+          <ProjectButton
+            projectType={project.type}
+            projectUrl={project.projectUrl}
+          />
+        </Flex>
+      </Flex>
+    </Flex>
+  );
+};
+
+//-------------------------------------------------------------------------------------
+
 interface ProjectCardProps {
   project: Project;
 }
@@ -94,17 +186,9 @@ const ProjectCard = (props: ProjectCardProps) => {
           <Heading as="h5" fontSize="2xl">
             {project.name}
           </Heading>
-          <Text>{project.description}</Text>
+          <Text>{project.shortDescription}</Text>
         </Stack>
-        <Flex justifyContent="right">
-          <Flex gap={2}>
-            <GithubButton githubUrl={project.githubUrl} />
-            <ProjectButton
-              projectType={project.type}
-              projectUrl={project.projectUrl}
-            />
-          </Flex>
-        </Flex>
+        <ButtonsFooter project={project} />
       </Flex>
     </Flex>
   );

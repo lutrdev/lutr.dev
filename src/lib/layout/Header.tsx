@@ -50,7 +50,7 @@ const Header = () => {
       padding="8"
       backgroundColor={transparentGray}
       backdropFilter="blur(7px)"
-      zIndex={100}
+      zIndex={5} // Not too high (like 100), so that Popover (z=10) appear above the header
     >
       <Flex as="header" align="center">
         <Heading as="h1" size="md">
