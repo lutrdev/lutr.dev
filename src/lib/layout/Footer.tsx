@@ -3,7 +3,7 @@ import NextLink from "next/link";
 
 const Footer = () => {
   return (
-    <Flex as="footer" width="full" align="center" marginTop={16}>
+    <Flex as="footer" width="full" align="center" marginTop={20}>
       <Text>
         © {new Date().getFullYear()} -{" "}
         <NextLink href="/" passHref>
