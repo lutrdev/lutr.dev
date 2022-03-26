@@ -20,7 +20,7 @@ type Technology =
   | "Firebase Realtime Database"
   | "Firebase Authentication"
   | "Firebase Performance"
-  | "Firebase Crashylitics";
+  | "Firebase Crashlytics";
 
 export interface TechnologyDetails {
   name: Technology;
@@ -64,8 +64,8 @@ export const technologies: Record<Technology, TechnologyDetails> = {
     name: "Firebase Performance",
     description: "Performance monitoring API",
   },
-  "Firebase Crashylitics": {
-    name: "Firebase Crashylitics",
+  "Firebase Crashlytics": {
+    name: "Firebase Crashlytics",
     description: "Crash reporting API",
   },
 };

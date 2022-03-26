@@ -49,7 +49,7 @@ export const projects: Project[] = [
       technologies["Firebase Realtime Database"],
       technologies["Firebase Authentication"],
       technologies["Firebase Performance"],
-      technologies["Firebase Crashylitics"],
+      technologies["Firebase Crashlytics"],
     ],
     tools: [
       tools["Android Studio"],
