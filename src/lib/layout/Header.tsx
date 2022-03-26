@@ -4,6 +4,8 @@ import { GrGithub, GrLinkedinOption } from "react-icons/gr";
 
 import Box from "lib/components/motion/Box";
 
+//-------------------------------------------------------------------------------------
+
 const LinkedInButton = () => {
   return (
     <NextLink href="https://www.linkedin.com/in/luca-trusca/" passHref>
@@ -17,6 +19,8 @@ const LinkedInButton = () => {
     </NextLink>
   );
 };
+
+//-------------------------------------------------------------------------------------
 
 const GitHubButton = () => {
   return (
@@ -32,6 +36,8 @@ const GitHubButton = () => {
   );
 };
 
+//-------------------------------------------------------------------------------------
+
 const Header = () => {
   // Add the 'BA' to the gray.50 HEX color to make it transparent
   // There may be a more straight-forward way to do it, however
@@ -44,6 +50,7 @@ const Header = () => {
       padding="8"
       backgroundColor={transparentGray}
       backdropFilter="blur(7px)"
+      zIndex={100}
     >
       <Flex as="header" align="center">
         <Heading as="h1" size="md">
@@ -58,5 +65,7 @@ const Header = () => {
     </Box>
   );
 };
+
+//-------------------------------------------------------------------------------------
 
 export default Header;
