@@ -1,3 +1,19 @@
-import Home from "lib/pages/home/Home";
+import { Stack } from "@chakra-ui/react";
 
-export default Home;
+import Projects from "../lib/layout/home/Projects";
+import Welcome from "../lib/layout/home/Welcome";
+
+//-------------------------------------------------------------------------------------
+
+const Index = () => {
+  return (
+    <Stack>
+      <Welcome />
+      <Projects />
+    </Stack>
+  );
+};
+
+//-------------------------------------------------------------------------------------
+
+export default Index;

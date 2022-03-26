@@ -10,7 +10,7 @@ import {
 import NextLink from "next/link";
 import { GrGithub } from "react-icons/gr";
 
-import type { Project } from "../pages/home/projects";
+import type { Project } from "../data/projects";
 
 //-------------------------------------------------------------------------------------
 

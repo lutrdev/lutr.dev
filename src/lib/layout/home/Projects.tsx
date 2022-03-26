@@ -1,34 +1,8 @@
-import { Box, Heading, SimpleGrid, Stack, Text } from "@chakra-ui/react";
+import { Box, Heading, SimpleGrid, Stack } from "@chakra-ui/react";
 
 import ProjectCard from "../../components/ProjectCard";
-
-import type { Project } from "./projects";
-import { projects } from "./projects";
-
-//-------------------------------------------------------------------------------------
-
-const Welcome = () => {
-  return (
-    <Box
-      display={{ md: "flex" }}
-      alignItems="center"
-      minHeight="60vh"
-      mb={8}
-      w="full"
-    >
-      <Stack>
-        <Heading as="h2" size="2xl">
-          Hi! 👋 I'm{" "}
-          <Box as="span" color="brand.500">
-            Luca
-          </Box>
-          .
-        </Heading>
-        <Text fontSize="2xl">Computer Science student & enthusiast</Text>
-      </Stack>
-    </Box>
-  );
-};
+import type { Project } from "../../data/projects";
+import { projects } from "../../data/projects";
 
 //-------------------------------------------------------------------------------------
 
@@ -107,13 +81,4 @@ const Projects = () => {
 
 //-------------------------------------------------------------------------------------
 
-const Home = () => {
-  return (
-    <Stack>
-      <Welcome />
-      <Projects />
-    </Stack>
-  );
-};
-
-export default Home;
+export default Projects;
