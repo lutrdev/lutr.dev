@@ -186,6 +186,7 @@ const ProjectCard = (props: ProjectCardProps) => {
 
   return (
     <Flex
+      as="article"
       backgroundColor="white"
       boxShadow="xl"
       rounded="xl"
