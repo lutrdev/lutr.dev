@@ -4,13 +4,7 @@ import { Box, Heading, Stack, Text } from "@chakra-ui/react";
 
 const Welcome = () => {
   return (
-    <Box
-      display={{ md: "flex" }}
-      alignItems="center"
-      minHeight="60vh"
-      mb={8}
-      w="full"
-    >
+    <Box display="flex" alignItems="center" minHeight="60vh" mb={8} w="full">
       <Stack>
         <Heading as="h2" size="2xl">
           Hi! 👋 I'm{" "}
