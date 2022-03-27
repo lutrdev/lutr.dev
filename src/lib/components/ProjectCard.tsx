@@ -113,7 +113,9 @@ const MoreDetailsPopover = ({ project }: MoreDetailsPopoverProps) => {
               <Heading size="sm">Languages:</Heading>
               <UnorderedList>
                 {project.languages.map((language) => (
-                  <ListItem>{language}</ListItem>
+                  <ListItem>
+                    <b>{language}</b>
+                  </ListItem>
                 ))}
               </UnorderedList>
             </Box>
