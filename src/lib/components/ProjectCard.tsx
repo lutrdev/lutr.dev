@@ -15,6 +15,7 @@ import {
   PopoverTrigger,
   Stack,
   Text,
+  Tooltip,
   UnorderedList,
 } from "@chakra-ui/react";
 import NextLink from "next/link";
@@ -31,16 +32,18 @@ interface GithubButtonProps {
 
 const GithubButton = ({ githubUrl }: GithubButtonProps) => {
   return (
-    <NextLink href={githubUrl} passHref>
-      <IconButton
-        as="a"
-        target="_blank"
-        aria-label="GitHub button"
-        colorScheme="brand"
-        variant="ghost"
-        icon={<GrGithub />}
-      />
-    </NextLink>
+    <Tooltip label="Source code" shouldWrapChildren hasArrow>
+      <NextLink href={githubUrl} passHref>
+        <IconButton
+          as="a"
+          target="_blank"
+          aria-label="GitHub button"
+          colorScheme="brand"
+          variant="ghost"
+          icon={<GrGithub />}
+        />
+      </NextLink>
+    </Tooltip>
   );
 };
 
@@ -86,14 +89,20 @@ interface MoreDetailsPopoverProps {
 const MoreDetailsPopover = ({ project }: MoreDetailsPopoverProps) => {
   return (
     <Popover>
-      <PopoverTrigger>
-        <IconButton
-          aria-label="More details"
-          colorScheme="brand"
-          variant="ghost"
-          icon={<AiOutlineInfoCircle />}
-        />
-      </PopoverTrigger>
+      <Tooltip label="More details" hasArrow>
+        {/* Additional element to make Tooltips work */}
+        {/* (https://github.com/chakra-ui/chakra-ui/issues/2843) */}
+        <Box display="inline-block">
+          <PopoverTrigger>
+            <IconButton
+              aria-label="More details"
+              colorScheme="brand"
+              variant="ghost"
+              icon={<AiOutlineInfoCircle />}
+            />
+          </PopoverTrigger>
+        </Box>
+      </Tooltip>
 
       <PopoverContent width={350} maxHeight={400}>
         <PopoverArrow />
