@@ -113,7 +113,7 @@ const MoreDetailsPopover = ({ project }: MoreDetailsPopoverProps) => {
               <Heading size="sm">Languages:</Heading>
               <UnorderedList>
                 {project.languages.map((language) => (
-                  <ListItem>
+                  <ListItem key={language}>
                     <b>{language}</b>
                   </ListItem>
                 ))}
@@ -125,7 +125,7 @@ const MoreDetailsPopover = ({ project }: MoreDetailsPopoverProps) => {
                 <Heading size="sm">Technologies:</Heading>
                 <UnorderedList>
                   {project.technologies.map((technology) => (
-                    <ListItem>
+                    <ListItem key={technology.name}>
                       <b>{technology.name}</b> - {technology.description}
                     </ListItem>
                   ))}
@@ -138,7 +138,7 @@ const MoreDetailsPopover = ({ project }: MoreDetailsPopoverProps) => {
                 <Heading size="sm">Tools:</Heading>
                 <UnorderedList>
                   {project.tools.map((tool) => (
-                    <ListItem>
+                    <ListItem key={tool.name}>
                       <b>{tool.name}</b> - {tool.description}
                     </ListItem>
                   ))}
