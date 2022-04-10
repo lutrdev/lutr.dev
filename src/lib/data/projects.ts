@@ -30,7 +30,7 @@ export const projects: Project[] = [
     imageUrl: "/images/gravity-box.png",
     projectUrl:
       "https://play.google.com/store/apps/details?id=ro.luca1152.gravitybox",
-    githubUrl: "https://github.com/coIIector/gravity-box",
+    githubUrl: "https://github.com/Luca1152/gravity-box",
     size: "big",
     type: "game",
     languages: ["Kotlin"],
