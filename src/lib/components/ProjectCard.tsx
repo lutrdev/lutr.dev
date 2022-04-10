@@ -202,7 +202,11 @@ const ProjectCard = (props: ProjectCardProps) => {
       flexDirection="column"
       height="100%"
     >
-      <Image src={project.imageUrl} roundedTop="xl" />
+      <Image
+        src={project.imageUrl}
+        alt={`${project.name} image`}
+        roundedTop="xl"
+      />
       <Flex
         padding={6}
         flexDirection="column"
