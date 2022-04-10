@@ -1,3 +1,4 @@
+/* eslint-disable sonarjs/no-duplicate-string */
 import type { Language, TechnologyDetails, ToolDetails } from "./tech";
 import { technologies, tools } from "./tech";
 
@@ -91,5 +92,20 @@ export const projects: Project[] = [
     languages: ["Java"],
     technologies: [technologies.libGDX],
     tools: [tools["IntelliJ IDEA"]],
+  },
+  {
+    name: "Breeze Wanderer",
+    shortDescription: "Physics game about guiding balloons. Made in 72 hours.",
+    moreDetailsDescription:
+      "A puzzle game about pushing balloons using big fans. Developed as part of the Ludum Dare 43 contest.",
+    year: 2018,
+    imageUrl: "/images/breeze-wanderer.png",
+    projectUrl: "https://luca1152.itch.io/breeze-wanderer",
+    githubUrl: "https://github.com/Luca1152/breeze-wanderer",
+    size: "small",
+    type: "game",
+    languages: ["Java"],
+    technologies: [technologies.libGDX, technologies.Box2D],
+    tools: [tools["IntelliJ IDEA"], tools.Inkscape],
   },
 ];
