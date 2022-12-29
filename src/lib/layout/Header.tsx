@@ -8,15 +8,14 @@ import Box from "lib/components/motion/Box";
 
 const LinkedInButton = () => {
   return (
-    <NextLink href="https://www.linkedin.com/in/luca-trusca/" passHref>
-      <IconButton
-        as="a"
-        target="_blank"
-        aria-label="LinkedIn button"
-        colorScheme="brand"
-        icon={<GrLinkedinOption />}
-      />
-    </NextLink>
+    <IconButton
+      as="a"
+      href="https://www.linkedin.com/in/luca-trusca/"
+      target="_blank"
+      aria-label="LinkedIn button"
+      colorScheme="brand"
+      icon={<GrLinkedinOption />}
+    />
   );
 };
 
@@ -24,15 +23,14 @@ const LinkedInButton = () => {
 
 const GitHubButton = () => {
   return (
-    <NextLink href="https://github.com/Luca1152" passHref>
-      <IconButton
-        as="a"
-        target="_blank"
-        aria-label="GitHub button"
-        colorScheme="brand"
-        icon={<GrGithub />}
-      />
-    </NextLink>
+    <IconButton
+      as="a"
+      href="https://github.com/Luca1152"
+      target="_blank"
+      aria-label="GitHub button"
+      colorScheme="brand"
+      icon={<GrGithub />}
+    />
   );
 };
 

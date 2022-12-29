@@ -11,5 +11,8 @@
     "react/no-unescaped-entities": 0,
     "consistent-return": "off",
     "default-case": "off"
-  }
+  },
+  "ignorePatterns": [
+    "**/*.config.js"
+  ]
 }

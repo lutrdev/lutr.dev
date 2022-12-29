@@ -18,7 +18,6 @@ import {
   Tooltip,
   UnorderedList,
 } from "@chakra-ui/react";
-import NextLink from "next/link";
 import { AiOutlineInfoCircle } from "react-icons/ai";
 import { GrGithub } from "react-icons/gr";
 
@@ -33,16 +32,15 @@ interface GithubButtonProps {
 const GithubButton = ({ githubUrl }: GithubButtonProps) => {
   return (
     <Tooltip label="Source code" shouldWrapChildren hasArrow>
-      <NextLink href={githubUrl} passHref>
-        <IconButton
-          as="a"
-          target="_blank"
-          aria-label="GitHub button"
-          colorScheme="brand"
-          variant="ghost"
-          icon={<GrGithub />}
-        />
-      </NextLink>
+      <IconButton
+        as="a"
+        href={githubUrl}
+        target="_blank"
+        aria-label="GitHub button"
+        colorScheme="brand"
+        variant="ghost"
+        icon={<GrGithub />}
+      />
     </Tooltip>
   );
 };
@@ -67,16 +65,15 @@ const ProjectButton = ({ projectType, projectUrl }: ProjectButtonProps) => {
   const verb = getProjectButtonVerb(projectType);
 
   return (
-    <NextLink href={projectUrl} passHref>
-      <Button
-        as="a"
-        target="_blank"
-        aria-label="Project button"
-        colorScheme="brand"
-      >
-        {verb}
-      </Button>
-    </NextLink>
+    <Button
+      as="a"
+      href={projectUrl}
+      target="_blank"
+      aria-label="Project button"
+      colorScheme="brand"
+    >
+      {verb}
+    </Button>
   );
 };
 

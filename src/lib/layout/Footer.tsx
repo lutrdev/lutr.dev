@@ -6,8 +6,8 @@ const Footer = () => {
     <Flex as="footer" width="full" align="center" marginTop={20}>
       <Text>
         © {new Date().getFullYear()} -{" "}
-        <NextLink href="/" passHref>
-          <Link>Luca Trușcă</Link>
+        <NextLink href="/">
+          <Link as="span">Luca Trușcă</Link>
         </NextLink>
       </Text>
     </Flex>
